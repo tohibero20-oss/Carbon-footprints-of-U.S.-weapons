@@ -2,15 +2,15 @@ README for Supplementary Tables Related to the Manuscript
 
 1. Overview
 
-This README provides a brief description of the supplementary tables associated with the manuscript. The data are organized in a single Excel workbook, Supplementary Table-20260912.xlsx, with seven worksheets corresponding to Tables S1–S7. These tables provide supporting emissions data, input–output sector classifications, mappings of military product categories, sectoral and regional concordances for the U.S.–GLORIA MRIO framework, company-level emission-intensity information, and reference mappings used in the study.
+This README provides a brief description of the supplementary tables associated with the manuscript. The data are organized in a single Excel workbook, Supplementary_Tables.xlsx, with seven worksheets corresponding to Tables S1–S7. These tables provide supporting emissions data, input–output sector classifications, mappings of military product categories, sectoral and regional concordances for the U.S.–GLORIA MRIO framework, company-level emission-intensity information, and reference mappings used in the study.
 
 2. Data File and Its Contents
 
-2.1 Supplementary Table-20260912.xlsx
+2.1 Supplementary_Tables.xlsx
 
 - Table S1: Summarizes greenhouse gas emissions reported for selected wars and military conflicts. The table includes the conflict name, greenhouse gas coverage, accounting scope, duration, total emissions, annual average emissions, and references.
 
-- Table S2: Reports annual greenhouse gas emissions for low-income countries from 2013 to 2023. The table provides country names, country codes, regional classifications, and annual emissions in MtCO2.
+- Table S2: Reports annual greenhouse gas emissions for low-income countries from 2013 to 2023. The table provides country names, country codes, regional classifications, and annual emissions in MtCO2e.
 
 - Table S3: Provides sector codes and descriptions used in the U.S. input–output economic accounts. Table S3a presents the concordance between the original 402-sector classification and the aggregated 391-sector classification. Table S3b lists the sectoral classification used in the U.S. national input–output tables after disaggregating the six arms-manufacturing sectors.
 

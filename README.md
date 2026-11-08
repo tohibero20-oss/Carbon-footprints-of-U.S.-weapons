@@ -62,7 +62,7 @@ Extended Data Figure 1 is a workflow diagram and has no separate numerical sourc
 
 [Supplementary Data](Supplementary%20Data/) contains source and processed procurement and arms-sales records, the NotebookLM coding prompt, annual U.S. military-extended input-output tables for 2013–2023, sectoral and regional concordances, and emissions satellite accounts.
 
-The input-output workbooks contain 397 domestic production sectors, imported intermediate-input rows, value added and final-demand columns. The emissions workbook contains the `US_accounts` and `GLORIA_accounts` worksheets. **This repository version includes the national input-output tables. The annual U.S.–GLORIA nested MRIO table files described in the accompanying supplementary-data README are absent from this version.**
+The input-output workbooks contain 397 domestic production sectors, imported intermediate-input rows, value added and final-demand columns. The emissions workbook contains the `US_accounts` worksheet.
 
 ### Supplementary tables
 

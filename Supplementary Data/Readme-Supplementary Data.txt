@@ -1,82 +1,87 @@
-README for Source Data Related to the Manuscript Submission
+README for Supplementary Data
 
 1. Overview
 
-This supplementary data package contains the key datasets used in the manuscript, including the military-extended input-output tables, cleaned military procurement and arms-sales records, sector concordance tables, and greenhouse gas emissions satellite accounts. The files are provided to improve the transparency, traceability, and reproducibility of the data processing and quantitative analysis reported in the manuscript. The data package covers the period 2013–2023.
+This directory contains datasets supporting the article "Carbon footprints of U.S. weapons". The datasets cover 2013–2023 and include procurement and arms-sales source records, processed product classifications, U.S. military-extended input-output tables, sectoral and regional concordances, and greenhouse-gas emissions satellite accounts.
 
+The directory contains 20 Excel workbooks, one Word document containing the AI coding prompt, and this README. File and directory names below match the deposited files.
 
 2. Folder Structure and File Contents
 
-2.1 Arms-sales datasets/
+2.1 1-Arms_sales_datasets/
 
-This folder contains the arms-sales datasets used in the analysis:
+DOD.xlsx
+Source procurement information compiled from official U.S. Department of Defense budget documents. Annual worksheets cover fiscal years 2013–2023 and retain the reported budget-line descriptions and expenditure information used in processing.
 
-- DOD.xlsx
-- FMS.xlsx
-- DCS.xlsx
+FMS.xlsx
+Foreign Military Sales information compiled from official announcements and supporting records. Annual worksheets cover 2013–2023. The Shipped_value worksheet provides annual aggregate FMS delivery values and their sources.
 
-The DoD and DCS datasets were obtained from officially released records. The FMS dataset was manually compiled from publicly available news releases and related official announcements. These files provide the source information used to identify and classify domestic military procurement, Foreign Military Sales (FMS), and Direct Commercial Sales (DCS) during the study period.
+DCS.xlsx
+Direct Commercial Sales information from officially released export records for 2013–2023. Annual worksheets retain country or territory, export category, quantity and authorized-value information where available. The MAP worksheet provides category definitions.
 
-2.2 Processed contract data/
+These files retain source-specific reporting structures and units. The harmonization of procurement expenditures, export authorizations and deliveries is described in the article and Supplementary Information.
 
-This folder contains cleaned and processed versions of the military procurement and arms-sales records. The records were classified by product type and mapped to the corresponding military sectors used in the input–output analysis. Supporting files document the information-extraction, classification, and validation procedures.
+2.2 2-Processed_contract_data/
 
-2.2.1 AI prompt.docx
+AI prompt.docx
+The coding prompt and rules used for NotebookLM-assisted information extraction and preliminary product-sector classification. The document specifies the permitted source materials, required output fields and handling of uncertain items.
 
-This document records the prompt, classification criteria, and instructions used for large-language-model-assisted information extraction and preliminary sector assignment. The model-assisted classifications were subsequently checked and validated during data processing.
+AI_process_contract.xlsx
+The Sheet worksheet contains product-line descriptions, extracted budget or program information, core deliverables and activities, preliminary AI sector assignments, final manual sector assignments, correction explanations where recorded, and source URLs where supplied. The MAP worksheet defines classification codes AS001–AS006.
 
-2.2.2 AI_process_contract.xlsx
+DOD_Sector_ProductUse_AllYears.xlsx
+Processed DoD procurement line items for fiscal years 2013–2023, including descriptions, monetary values, sector codes and product-use classifications. The MAP worksheet defines the sector codes.
 
-This workbook contains the cleaned contract records and their assigned product and sector classifications. It also includes the mapping information used to connect individual contract descriptions with the corresponding arms-manufacturing sectors.
+FMS_Sector_ProductUse_AllYears.xlsx
+Processed FMS product records for fiscal years 2013–2023, including descriptions, monetary values, sector codes and product-use classifications. The MAP worksheet defines the sector codes.
 
-2.2.3 DOD_Sector_ProductUse_AllYears.xlsx
+DCS_with_NewSector_2013_2023.xlsx
+DCS records for 2013–2023 with assigned weapon-sector classifications. Annual worksheets retain export categories and reported values together with the NewSector field. The MAP worksheet documents the original DCS category definitions.
 
-This workbook contains the processed U.S. Department of Defense (DoD) procurement records for fiscal years 2013–2023. The annual worksheets report the cleaned line-item descriptions, assigned arms-manufacturing sectors, and product-use classifications. The mapping worksheet documents the concordance applied during classification.
+Source-record counts, product-classification entries and firm-level order counts refer to different statistical units and processing stages. Their definitions are described in the article and Supplementary Information.
 
-2.2.4 FMS_Sector_ProductUse_AllYears.xlsx
+2.3 3-Input_output_tables/3.1-US_Military_Extended_IOTs/
 
-This workbook contains the processed Foreign Military Sales (FMS) records for fiscal years 2013–2023. The annual worksheets report the cleaned sales records, assigned arms-manufacturing sectors, and product-use classifications. The mapping worksheet documents the sector-assignment rules.
+This directory contains eleven annual U.S. military-extended input-output workbooks, named updated_M2013.xlsx through updated_M2023.xlsx. Each workbook contains the updated_svalue worksheet.
 
-2.2.5 DCS_with_NewSector_2013_2023.xlsx
+The production block contains 397 sectors, comprising 391 ordinary or civilian-sector nodes and six military-sector nodes. Additional rows record imported intermediate inputs and value added. The tables also contain 19 final-demand categories. Monetary values are expressed in million USD.
 
-This workbook contains the processed Direct Commercial Sales (DCS) records for 2013–2023. The annual worksheets report DCS records and their assigned arms-manufacturing sectors. The mapping worksheet provides the concordance between DCS categories and the six military product sectors.
+The first two rows and columns provide transaction-type labels and sector codes. D identifies ordinary or civilian domestic production, M identifies military production, and I identifies imported inputs. The pair M/S001 corresponds to military-sector code MS001 in the emissions account, with the same convention for the other five military sectors.
 
+The six military sectors cover aircraft, missiles, armored vehicles and tanks, ships, ammunition and ordnance, and military electronic equipment. Sector and final-demand definitions are provided in 4-Sector_and_region_concordances.xlsx.
 
-2.3 Input-output tables/
+2.4 4-Sector_and_region_concordances.xlsx
 
-This folder contains the annual input–output tables used in the national and global stages of the analysis. It is divided into two subfolders, each containing 11 annual Excel workbooks covering 2013–2023.
+This workbook contains four worksheets.
 
-2.3.1 US Military-extended IOTs/
+Table 4-1 contains the mapping between the 402-sector and 391-sector U.S. classifications, sector definitions for the military-extended national framework, and final-demand codes.
 
-This subfolder contains 11 annual U.S. military-extended, non-competitive input–output tables:
+Table 4-2 maps DoD and FMS product descriptions and DCS categories to weapon-manufacturing sectors.
 
-- updated_MYYYY.xlsx, where YYYY = 2013, 2014, ..., 2023
+Table 4-3 contains mappings from the 391 U.S. sectors and 120 GLORIA sectors to the 86 common sector groups, together with common-sector names and codes.
 
-Each workbook contains the U.S. input–output table for the corresponding year after six military sectors were separated from their parent industries. The tables distinguish domestic intermediate transactions, imported intermediate inputs, final demand, value added, and related accounting components. The sector and final-demand codes used in these tables are documented in Sector_and_regional_concordances.xlsx.
+Table 4-4 contains the mapping from 164 GLORIA regions to 32 aggregated regions and lists their names and acronyms.
 
-The tables were constructed from the U.S. national input–output accounts and reconciled using the procedures described in the Supplementary Information. They provide the national accounting framework used to estimate U.S. domestic military production and supply-chain emissions.
+2.5 5-Emissions_satellite_accounts.xlsx
 
-2.3.2 US-GLORIA Nested MRIOs/
+This workbook contains annual direct greenhouse-gas emissions for 2013–2023, expressed in tonnes of CO2 equivalent (tCO2e), in the US_accounts worksheet.
 
-This subfolder contains 11 annual military-extended multiregional input–output (MRIO) tables nested within the GLORIA framework:
+US_accounts contains the account for 397 U.S. production sectors. S001–S391 identify ordinary or civilian-sector nodes, and MS001–MS006 identify military-sector nodes.
 
-- USMRIO_Output_YYYY.xlsx, where YYYY = 2013, 2014, ..., 2023
+This account supplies direct-emissions inputs. Scope 2 and upstream Scope 3 emissions are derived through input-output calculations.
 
-These workbooks integrate the U.S. military-extended input–output tables into the harmonized GLORIA MRIO system. The global framework contains 32 regions and 86 common sectors, while the U.S. block retains six additional military sectors. U.S.-linked intermediate and final-demand flows are reconstructed using the U.S. national table together with military-specific import and export allocation information, whereas non-U.S.-to-non-U.S. flows retain the corresponding GLORIA structure. The annual MRIO tables are used to trace domestic and foreign supply-chain emissions associated with U.S. military production.
+3. Relationship to the Calculation Code
 
+The MATLAB function Supplementary_Code.m is located in the repository's Supplementary Code directory. It reads the US_accounts worksheet and the annual updated_MYYYY.xlsx workbooks.
 
-2.4 Sector and regional concordances.xlsx
+The function aligns sector codes and combines S390 and S391 consistently across transactions, outputs and emissions, resulting in a 396-sector calculation system. It calculates Scope 1, Scope 2 and domestic upstream Scope 3 emissions for six weapon-manufacturing sectors, including an adjustment for intermediate transactions among those sectors.
 
-This workbook contains the sectoral and regional concordances used to harmonize the U.S. national input–output accounts with the GLORIA framework. It documents the mappings between the detailed U.S. sector classification and the 86 common sectors, between the original GLORIA sector classification and the 86 common sectors, and between the original GLORIA regions and the 32-region classification used in the nested MRIO framework. It also provides the names and codes of the harmonized sectors and regions and identifies the six U.S.-specific military sectors.
+The repository's main README provides calling commands and output definitions. Methods and accounting boundaries for global supply chains, product-use emissions, projections and sensitivity analyses are described in the article and Supplementary Information.
 
-These concordances are used to align economic accounts, military procurement and arms-sales records, trade flows, and emissions data across the national and global models.
+4. Data Format and Usage
 
+Excel files are provided in .xlsx format, and the AI prompt is supplied in .docx format. Preserve directory names and file names when using the supplied MATLAB function.
 
-2.5 Emissions satellite accounts.xlsx
+Consult the column headings for monetary units in procurement and arms-sales records. Input-output table values are in million USD, and satellite-account emissions are in tCO2e. Blank transaction cells in the national input-output tables are treated as zero by the supplied function.
 
-This workbook contains the GHG emissions satellite accounts matched to the sectoral and regional structure of the input–output tables. It provides the direct emissions information used to construct sectoral emission intensities and to estimate Scope 1, Scope 2, and upstream Scope 3 emissions in the national and nested MRIO analyses.
-
-
-3. Data Format and Usage
-
-All Excel files are provided in .xlsx format and can be opened using Microsoft Excel or other compatible spreadsheet software. The files are intended to support transparency and reproducibility of the manuscript results by documenting the processed datasets and sector assignments used to construct the military-extended input-output tables.
+Figure-specific numerical data are provided in the separate Source data directory. Supplementary Tables S1–S7 are in Supplementary Table/Supplementary_Tables.xlsx.
